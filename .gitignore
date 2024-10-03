@@ -1,0 +1,111 @@
+# Ignore Visual Studio temporary files, build results, and
+# Mac specific files and directories
+
+## Ignore Mac OS generated files
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Thumbnails
+._*
+
+# Ignore the Application files
+application/octet-stream
+
+# Folder settings
+Icon?
+__MACOSX
+
+# Visual Studio
+.vscode/
+.vs/
+.vscode/settings.json
+.vscode/tasks.json
+.vscode/launch.json
+
+# User-specific files
+*.rsuser
+*.suo
+*.user
+*.userosscache
+*.userprefs
+
+# Windows image file caches
+Thumbs.db
+ehthumbs.db
+
+# Folder for Visual Studio/Code build output
+bin/
+obj/
+
+# Include each project folder's bin/obj
+**/bin/
+**/obj/
+
+# Onion Architecture specific projects
+/obj
+Infrastructure/EventManagementApi.Infrastructure.External/obj
+Core/EventManagementApi.Core.Application/obj
+
+Core/EventManagementApi.Core.Domain/bin/
+Core/EventManagementApi.Core.Domain/obj/
+Core/EventManagementApi.Core.Application/bin/
+Core/EventManagementApi.Core.Application/obj/
+Infrastructure/bin/
+Infrastructure/obj/
+Infrastructure/EventManagementApi.Infrastructure.Persistence/bin/
+Infrastructure/EventManagementApi.Infrastructure.Persistence/obj/
+Infrastructure/EventManagementApi.Infrastructure.External/bin/
+Infrastructure/EventManagementApi.Infrastructure.External/obj/
+EventManagementApi.API/bin/
+EventManagementApi.API/obj/
+
+# Mono auto generated files
+mono_crash.*
+
+# Rider settings
+.idea/
+
+# Exclude NuGet packages and build artifacts
+*.nupkg
+*.snupkg
+*.Symbols.nupkg
+
+# ASP.NET temp files
+**/.vs/
+**/temp/
+**/artifacts/
+
+# Windows specific
+*.pdb
+*.exe
+*.dll
+*.log
+
+# Coverage files and reports
+coverage/
+TestResults/
+
+# Logs
+*.log
+logs/
+
+# IDE configurations
+.project
+.idea/
+*.tmproj
+*.csproj.user
+
+# Package restore files
+packages/
+.nuget/
+*.nupkg
+*.snupkg
+project.lock.json
+project.fragment.lock.json
+
+# Miscellaneous
+*.tmp
+*.bak
+*.swp
+*.lock
