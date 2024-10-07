@@ -107,6 +107,46 @@
         "frameworkReferences": [
           "Microsoft.AspNetCore.App"
         ]
+      },
+      "EventManagementApi.Core.Application/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v8.0",
+        "compile": {
+          "bin/placeholder/EventManagementApi.Core.Application.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/EventManagementApi.Core.Application.dll": {}
+        }
+      },
+      "EventManagementApi.Core.Domain/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v8.0",
+        "compile": {
+          "bin/placeholder/EventManagementApi.Core.Domain.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/EventManagementApi.Core.Domain.dll": {}
+        }
+      },
+      "EventManagementApi.Infrastructure.External/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v8.0",
+        "compile": {
+          "bin/placeholder/EventManagementApi.Infrastructure.External.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/EventManagementApi.Infrastructure.External.dll": {}
+        }
+      },
+      "EventManagementApi.Infrastructure.Persistence/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v8.0",
+        "compile": {
+          "bin/placeholder/EventManagementApi.Infrastructure.Persistence.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/EventManagementApi.Infrastructure.Persistence.dll": {}
+        }
       }
     }
   },
@@ -451,10 +491,34 @@
         "swashbuckle.aspnetcore.swaggerui.6.4.0.nupkg.sha512",
         "swashbuckle.aspnetcore.swaggerui.nuspec"
       ]
+    },
+    "EventManagementApi.Core.Application/1.0.0": {
+      "type": "project",
+      "path": "../Core/EventManagementApi.Core.Application/EventManagementApi.Core.Application.csproj",
+      "msbuildProject": "../Core/EventManagementApi.Core.Application/EventManagementApi.Core.Application.csproj"
+    },
+    "EventManagementApi.Core.Domain/1.0.0": {
+      "type": "project",
+      "path": "../Core/EventManagementApi.Core.Domain/EventManagementApi.Core.Domain.csproj",
+      "msbuildProject": "../Core/EventManagementApi.Core.Domain/EventManagementApi.Core.Domain.csproj"
+    },
+    "EventManagementApi.Infrastructure.External/1.0.0": {
+      "type": "project",
+      "path": "../Infrastructure/EventManagementApi.Infrastructure.External/EventManagementApi.Infrastructure.External.csproj",
+      "msbuildProject": "../Infrastructure/EventManagementApi.Infrastructure.External/EventManagementApi.Infrastructure.External.csproj"
+    },
+    "EventManagementApi.Infrastructure.Persistence/1.0.0": {
+      "type": "project",
+      "path": "../Infrastructure/EventManagementApi.Infrastructure.Persistence/EventManagementApi.Infrastructure.Persistence.csproj",
+      "msbuildProject": "../Infrastructure/EventManagementApi.Infrastructure.Persistence/EventManagementApi.Infrastructure.Persistence.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net8.0": [
+      "EventManagementApi.Core.Application >= 1.0.0",
+      "EventManagementApi.Core.Domain >= 1.0.0",
+      "EventManagementApi.Infrastructure.External >= 1.0.0",
+      "EventManagementApi.Infrastructure.Persistence >= 1.0.0",
       "Microsoft.AspNetCore.OpenApi >= 8.0.8",
       "Swashbuckle.AspNetCore >= 6.4.0"
     ]
@@ -483,7 +547,20 @@
       "frameworks": {
         "net8.0": {
           "targetAlias": "net8.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "/Users/mursal/Projects/EventManagementApi/Core/EventManagementApi.Core.Application/EventManagementApi.Core.Application.csproj": {
+              "projectPath": "/Users/mursal/Projects/EventManagementApi/Core/EventManagementApi.Core.Application/EventManagementApi.Core.Application.csproj"
+            },
+            "/Users/mursal/Projects/EventManagementApi/Core/EventManagementApi.Core.Domain/EventManagementApi.Core.Domain.csproj": {
+              "projectPath": "/Users/mursal/Projects/EventManagementApi/Core/EventManagementApi.Core.Domain/EventManagementApi.Core.Domain.csproj"
+            },
+            "/Users/mursal/Projects/EventManagementApi/Infrastructure/EventManagementApi.Infrastructure.External/EventManagementApi.Infrastructure.External.csproj": {
+              "projectPath": "/Users/mursal/Projects/EventManagementApi/Infrastructure/EventManagementApi.Infrastructure.External/EventManagementApi.Infrastructure.External.csproj"
+            },
+            "/Users/mursal/Projects/EventManagementApi/Infrastructure/EventManagementApi.Infrastructure.Persistence/EventManagementApi.Infrastructure.Persistence.csproj": {
+              "projectPath": "/Users/mursal/Projects/EventManagementApi/Infrastructure/EventManagementApi.Infrastructure.Persistence/EventManagementApi.Infrastructure.Persistence.csproj"
+            }
+          }
         }
       },
       "warningProperties": {
