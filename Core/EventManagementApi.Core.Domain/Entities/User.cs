@@ -7,6 +7,8 @@ public class User : IEntity, IAuditable<User>
 {
     public int Id { get; set; }
 
+    public string Name { get; set; }
+    public string Surname { get; set; }
     public string Username { get; set; }
     public string Email { get; set; }
     public string? RefreshToken { get; set; }
@@ -27,6 +29,22 @@ public class User : IEntity, IAuditable<User>
         return this;
     } 
 
+    public User ActivateUser()
+    {
+        IsActivated = true;
+
+        return this;
+    }
+
+    public User ResetOtp()
+    {
+        // Clear OTP after successful confirmation
+        OTP = null;
+        OTPExpireDate = null;
+
+        return this;
+    } 
+
     public User SetPassword(string passwordHash, string paswordSalt)
     {
         PasswordHash = passwordHash;
@@ -34,15 +52,30 @@ public class User : IEntity, IAuditable<User>
 
         return this;
     }
-    public User SetDetails(string username, string email, UserRole role)
+
+    public User SetOtp(string otp, DateTime expireDate)
     {
-        Email = email;
-        Username = username;
-        Role = role;
+        OTP = otp;
+        OTPExpireDate = expireDate;
 
         return this;
     }
 
+    public User SetDetails(string username, string email,string name, string surname)
+    {
+        Email = email;
+        Username = username;
+        Name = name;
+        Surname = surname;
+
+        return this;
+    }
+    public User ChangeRole(UserRole role)
+    {
+        Role = role;
+
+        return this;
+    }
 
     public int? CreatorId { get; set; }
     public User? Creator { get; set; }
@@ -52,7 +85,7 @@ public class User : IEntity, IAuditable<User>
     public DateTime? ModifyDate { get; set; }
     public bool IsDeleted { get; set; }
 
-    public User SetCreationCredentials(int userId)
+    public User SetCreationCredentials(int? userId)
     {
         CreatorId = userId;
         CreateDate = DateTime.UtcNow.AddHours(4);
@@ -60,7 +93,7 @@ public class User : IEntity, IAuditable<User>
         return this;
     }
 
-    public User SetCredentials(int userId)
+    public User SetCredentials(int? userId)
     {
         if(CreateDate == null)
         {
@@ -74,7 +107,7 @@ public class User : IEntity, IAuditable<User>
         return this;
     }
 
-    public User SetModifyCredentials(int userId)
+    public User SetModifyCredentials(int? userId)
     {
         ModifierId = userId;
         ModifyDate = DateTime.UtcNow.AddHours(4);

@@ -2,6 +2,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\EventManagementApi.Core.Domain\EventManagementApi.Core.Domain.csproj" />
+    <ProjectReference Include="..\..\Infrastructure\EventManagementApi.Infrastructure.External\EventManagementApi.Infrastructure.External.csproj" />
   </ItemGroup>
 
   <ItemGroup>
