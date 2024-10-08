@@ -28,6 +28,9 @@
             "projectReferences": {
               "/Users/mursal/Projects/EventManagementApi/Core/EventManagementApi.Core.Domain/EventManagementApi.Core.Domain.csproj": {
                 "projectPath": "/Users/mursal/Projects/EventManagementApi/Core/EventManagementApi.Core.Domain/EventManagementApi.Core.Domain.csproj"
+              },
+              "/Users/mursal/Projects/EventManagementApi/Infrastructure/EventManagementApi.Infrastructure.External/EventManagementApi.Infrastructure.External.csproj": {
+                "projectPath": "/Users/mursal/Projects/EventManagementApi/Infrastructure/EventManagementApi.Infrastructure.External/EventManagementApi.Infrastructure.External.csproj"
               }
             }
           }
