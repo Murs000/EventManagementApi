@@ -25,7 +25,11 @@
         "frameworks": {
           "net8.0": {
             "targetAlias": "net8.0",
-            "projectReferences": {}
+            "projectReferences": {
+              "/Users/mursal/Projects/EventManagementApi/Core/EventManagementApi.Core.Domain/EventManagementApi.Core.Domain.csproj": {
+                "projectPath": "/Users/mursal/Projects/EventManagementApi/Core/EventManagementApi.Core.Domain/EventManagementApi.Core.Domain.csproj"
+              }
+            }
           }
         },
         "warningProperties": {

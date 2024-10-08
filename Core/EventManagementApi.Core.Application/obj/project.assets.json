@@ -1,11 +1,30 @@
 {
   "version": 3,
   "targets": {
-    "net8.0": {}
+    "net8.0": {
+      "EventManagementApi.Core.Domain/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v8.0",
+        "compile": {
+          "bin/placeholder/EventManagementApi.Core.Domain.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/EventManagementApi.Core.Domain.dll": {}
+        }
+      }
+    }
   },
-  "libraries": {},
+  "libraries": {
+    "EventManagementApi.Core.Domain/1.0.0": {
+      "type": "project",
+      "path": "../EventManagementApi.Core.Domain/EventManagementApi.Core.Domain.csproj",
+      "msbuildProject": "../EventManagementApi.Core.Domain/EventManagementApi.Core.Domain.csproj"
+    }
+  },
   "projectFileDependencyGroups": {
-    "net8.0": []
+    "net8.0": [
+      "EventManagementApi.Core.Domain >= 1.0.0"
+    ]
   },
   "packageFolders": {
     "/Users/mursal/.nuget/packages/": {}
@@ -31,7 +50,11 @@
       "frameworks": {
         "net8.0": {
           "targetAlias": "net8.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "/Users/mursal/Projects/EventManagementApi/Core/EventManagementApi.Core.Domain/EventManagementApi.Core.Domain.csproj": {
+              "projectPath": "/Users/mursal/Projects/EventManagementApi/Core/EventManagementApi.Core.Domain/EventManagementApi.Core.Domain.csproj"
+            }
+          }
         }
       },
       "warningProperties": {

@@ -19,7 +19,7 @@ public class User : IEntity, IAuditable<User>
     public bool IsActivated { get; set; }
     public UserRole Role { get; set; }
 
-    public User SetRefreshToken(string refreshToken, DateTime refreshTokenExpireDate)
+    public User SetRefreshToken(string refreshToken, DateTime? refreshTokenExpireDate)
     {
         RefreshToken = refreshToken;
         RefreshTokenExpireDate = refreshTokenExpireDate;
