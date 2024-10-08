@@ -6,4 +6,20 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.Http" Version="2.2.2" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="8.0.8" />
+    <PackageReference Include="Microsoft.Extensions.Configuration" Version="8.0.0" />
+    <PackageReference Include="Microsoft.IdentityModel" Version="7.0.0" />
+    <PackageReference Include="Npgsql.EntityFrameworkCore.PostgreSQL" Version="8.0.8" />
+    <PackageReference Include="Scrutor" Version="5.0.1" />
+    <PackageReference Include="System.IdentityModel.Tokens.Jwt" Version="8.1.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\Core\EventManagementApi.Core.Application\EventManagementApi.Core.Application.csproj" />
+    <ProjectReference Include="..\..\Core\EventManagementApi.Core.Domain\EventManagementApi.Core.Domain.csproj" />
+    <ProjectReference Include="..\EventManagementApi.Infrastructure.External\EventManagementApi.Infrastructure.External.csproj" />
+  </ItemGroup>
+
 </Project>

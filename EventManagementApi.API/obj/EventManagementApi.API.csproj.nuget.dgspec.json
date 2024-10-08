@@ -287,7 +287,17 @@
         "frameworks": {
           "net8.0": {
             "targetAlias": "net8.0",
-            "projectReferences": {}
+            "projectReferences": {
+              "/Users/mursal/Projects/EventManagementApi/Core/EventManagementApi.Core.Application/EventManagementApi.Core.Application.csproj": {
+                "projectPath": "/Users/mursal/Projects/EventManagementApi/Core/EventManagementApi.Core.Application/EventManagementApi.Core.Application.csproj"
+              },
+              "/Users/mursal/Projects/EventManagementApi/Core/EventManagementApi.Core.Domain/EventManagementApi.Core.Domain.csproj": {
+                "projectPath": "/Users/mursal/Projects/EventManagementApi/Core/EventManagementApi.Core.Domain/EventManagementApi.Core.Domain.csproj"
+              },
+              "/Users/mursal/Projects/EventManagementApi/Infrastructure/EventManagementApi.Infrastructure.External/EventManagementApi.Infrastructure.External.csproj": {
+                "projectPath": "/Users/mursal/Projects/EventManagementApi/Infrastructure/EventManagementApi.Infrastructure.External/EventManagementApi.Infrastructure.External.csproj"
+              }
+            }
           }
         },
         "warningProperties": {
@@ -304,6 +314,36 @@
       "frameworks": {
         "net8.0": {
           "targetAlias": "net8.0",
+          "dependencies": {
+            "Microsoft.AspNetCore.Http": {
+              "target": "Package",
+              "version": "[2.2.2, )"
+            },
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[8.0.8, )"
+            },
+            "Microsoft.Extensions.Configuration": {
+              "target": "Package",
+              "version": "[8.0.0, )"
+            },
+            "Microsoft.IdentityModel": {
+              "target": "Package",
+              "version": "[7.0.0, )"
+            },
+            "Npgsql.EntityFrameworkCore.PostgreSQL": {
+              "target": "Package",
+              "version": "[8.0.8, )"
+            },
+            "Scrutor": {
+              "target": "Package",
+              "version": "[5.0.1, )"
+            },
+            "System.IdentityModel.Tokens.Jwt": {
+              "target": "Package",
+              "version": "[8.1.1, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",
