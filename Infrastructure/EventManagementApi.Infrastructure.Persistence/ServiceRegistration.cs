@@ -31,5 +31,6 @@ public static class ServiceRegistration
 
         services.AddScoped<IClaimManager, ClaimManager>();
         services.AddScoped<IUserManager, UserManager>();
+        services.AddScoped<IEmailManager, EmailManager>();
     }
 }
