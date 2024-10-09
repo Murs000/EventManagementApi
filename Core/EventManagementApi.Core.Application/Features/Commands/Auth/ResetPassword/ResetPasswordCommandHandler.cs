@@ -16,7 +16,7 @@ public class ResetPasswordCommandHandler : IRequestHandler<ResetPasswordCommand,
 
     public async Task<bool> Handle(ResetPasswordCommand request, CancellationToken cancellationToken)
     {
-        var user = await _userRepository.GetAsync(x => x.Email == request.Email && x.OTPExpireDate > DateTime.Now);
+        var user = await _userRepository.GetAsync(x => x.Email == request.Email && x.OTPExpireDate > DateTime.UtcNow.AddHours(4));
 
         if (user == null)
         {
