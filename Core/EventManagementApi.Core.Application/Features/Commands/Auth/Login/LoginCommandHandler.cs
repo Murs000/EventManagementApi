@@ -28,8 +28,7 @@ public class LoginCommandHandler : IRequestHandler<LoginCommand, JwtTokenDto>
             throw new UnAuthorizedException("Invalid credentials");
         }
 
-        var refreshToken = RefreshTokenHelper.GenerateRefreshToken(user.Id);
-        var refreshExpireAt = DateTime.UtcNow.AddHours(4).AddDays(20);
+        (var refreshToken, var refreshExpireAt) = RefreshTokenHelper.GenerateRefreshToken(user.Id);
 
         user.SetRefreshToken(refreshToken, refreshExpireAt);
 

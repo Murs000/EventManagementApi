@@ -26,8 +26,7 @@ public class RefreshTokenCommandHandler : IRequestHandler<RefreshTokenCommand, J
             throw new UnAuthorizedException("Invalid or expired refresh token.");
         }
 
-        var newRefreshToken = RefreshTokenHelper.GenerateRefreshToken(user.Id);
-        var newRefreshExpireAt = DateTime.UtcNow.AddHours(4).AddDays(20);
+        (var newRefreshToken, var newRefreshExpireAt) = RefreshTokenHelper.GenerateRefreshToken(user.Id);
 
         user.SetRefreshToken(newRefreshToken, newRefreshExpireAt);
 
