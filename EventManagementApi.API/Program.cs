@@ -1,4 +1,5 @@
 using System.Text;
+using EventManagementApi.API.Middlewares;
 using EventManagementApi.Core.Application;
 using EventManagementApi.Infrastructure.External.Settings;
 using EventManagementApi.Infrastructure.Persistence;
@@ -83,6 +84,8 @@ if (app.Environment.IsDevelopment())
     var db = scope.ServiceProvider.GetRequiredService<EventAppDB>();
     db.Database.EnsureCreated();
 }
+
+app.UseMiddleware<ExceptionHandlingMiddleware>();
 
 app.UseHttpsRedirection();
 
