@@ -60,6 +60,8 @@ Infrastructure/EventManagementApi.Infrastructure.External/obj/
 EventManagementApi.API/bin/
 EventManagementApi.API/obj/
 
+
+
 # Mono auto generated files
 mono_crash.*
 
