@@ -3,10 +3,8 @@ using EventManagementApi.Core.Domain.Enums;
 
 namespace EventManagementApi.Core.Domain.Entities;
 
-public class User : IEntity, IAuditable<User>
+public class User : BaseEntity<User>
 {
-    public int Id { get; set; }
-
     public string Name { get; set; }
     public string Surname { get; set; }
     public string Username { get; set; }
@@ -73,44 +71,6 @@ public class User : IEntity, IAuditable<User>
     public User ChangeRole(UserRole role)
     {
         Role = role;
-
-        return this;
-    }
-
-    public int? CreatorId { get; set; }
-    public User? Creator { get; set; }
-    public DateTime? CreateDate { get; set; }
-    public int? ModifierId { get; set; }
-    public User? Modifier { get; set; }
-    public DateTime? ModifyDate { get; set; }
-    public bool IsDeleted { get; set; }
-
-    public User SetCreationCredentials(int? userId)
-    {
-        CreatorId = userId;
-        CreateDate = DateTime.UtcNow.AddHours(4);
-
-        return this;
-    }
-
-    public User SetCredentials(int? userId)
-    {
-        if(CreateDate == null)
-        {
-            SetCreationCredentials(userId);
-        }
-        else
-        {
-            SetModifyCredentials(userId);
-        }
-
-        return this;
-    }
-
-    public User SetModifyCredentials(int? userId)
-    {
-        ModifierId = userId;
-        ModifyDate = DateTime.UtcNow.AddHours(4);
 
         return this;
     }
