@@ -1,4 +1,4 @@
-namespace EventManagementApi.Core.Application.Features.Queries.Place.ViewModels;
+namespace EventManagementApi.Core.Application.Features.Queries.Venue.ViewModels;
 
 public class PlaceDto
 {

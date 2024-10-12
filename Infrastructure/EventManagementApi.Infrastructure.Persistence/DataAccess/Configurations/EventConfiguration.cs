@@ -17,9 +17,9 @@ public class EventConfiguration : IEntityTypeConfiguration<Event>
         builder.Property(e => e.StartDate)
             .IsRequired();
 
-        builder.HasOne(e => e.Place)
+        builder.HasOne(e => e.Venue)
             .WithMany(p => p.Events)
-            .HasForeignKey(e => e.PlaceId)
+            .HasForeignKey(e => e.VenueId)
             .OnDelete(DeleteBehavior.Cascade);
 
         builder.HasOne(e => e.Creator)

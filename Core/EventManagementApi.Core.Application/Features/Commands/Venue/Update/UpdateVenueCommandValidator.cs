@@ -1,11 +1,14 @@
 using FluentValidation;
 
-namespace EventManagementApi.Core.Application.Features.Commands.Place.Create
+namespace EventManagementApi.Core.Application.Features.Commands.Venue.Update
 {
-    public class CreatePlaceCommandValidator : AbstractValidator<CreatePlaceCommand>
+    public class UpdateVenueCommandValidator : AbstractValidator<UpdateVenueCommand>
     {
-        public CreatePlaceCommandValidator()
+        public UpdateVenueCommandValidator()
         {
+            RuleFor(x => x.Id)
+                .GreaterThan(0).WithMessage("Valid Place ID is required");
+
             RuleFor(x => x.Name)
                 .NotEmpty().WithMessage("Place name is required")
                 .MaximumLength(100).WithMessage("Place name can't exceed 100 characters");

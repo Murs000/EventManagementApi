@@ -3,7 +3,7 @@ using EventManagementApi.Core.Domain.Enums;
 
 namespace EventManagementApi.Core.Domain.Entities;
 
-public class Place : BaseEntity<Place>
+public class Venue : BaseEntity<Venue>
 {
     public string Name { get; set; }
     public string Address { get; set; }

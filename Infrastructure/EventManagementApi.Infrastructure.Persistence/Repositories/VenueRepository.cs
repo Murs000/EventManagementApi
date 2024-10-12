@@ -4,9 +4,9 @@ using EventManagementApi.Infrastructure.Persistence.DataAccess;
 
 namespace EventManagementApi.Infrastructure.Persistence.Repositories;
 
-public class SeatRepository : Repository<Seat> , ISeatRepository
+public class VenueRepository : Repository<Venue> , IVenueRepository
 {
-    public SeatRepository(EventAppDB context) : base(context)
+    public VenueRepository(EventAppDB context) : base(context)
     {
     }
 }

@@ -4,9 +4,9 @@ using EventManagementApi.Core.Domain.Entities;
 
 namespace EventManagementApi.Infrastructure.Persistence.DataAccess.Configurations;
 
-public class PlaceConfiguration : IEntityTypeConfiguration<Place>
+public class PlaceConfiguration : IEntityTypeConfiguration<Venue>
 {
-    public void Configure(EntityTypeBuilder<Place> builder)
+    public void Configure(EntityTypeBuilder<Venue> builder)
     {
         builder.HasKey(p => p.Id);
 

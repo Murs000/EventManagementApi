@@ -1,8 +1,8 @@
 using MediatR;
 
-namespace EventManagementApi.Core.Application.Features.Commands.Place.Update;
+namespace EventManagementApi.Core.Application.Features.Commands.Venue.Update;
 
-public class UpdatePlaceCommand : IRequest<bool>
+public class UpdateVenueCommand : IRequest<bool>
 {
     public int Id { get; set; }
     public string Name { get; set; }

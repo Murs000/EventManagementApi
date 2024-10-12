@@ -10,5 +10,5 @@ public class Seat : BaseEntity<Seat>
     public decimal Price { get; set; }
 
     public int PlaceId { get; set; }
-    public Place Place { get; set; }
+    public Venue Place { get; set; }
 }

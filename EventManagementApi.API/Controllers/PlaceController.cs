@@ -1,8 +1,8 @@
-using EventManagementApi.Core.Application.Features.Commands.Place.Create;
-using EventManagementApi.Core.Application.Features.Commands.Place.Delete;
-using EventManagementApi.Core.Application.Features.Commands.Place.Update;
-using EventManagementApi.Core.Application.Features.Queries.Place.GetAll;
-using EventManagementApi.Core.Application.Features.Queries.Place.GetById;
+using EventManagementApi.Core.Application.Features.Commands.Venue.Create;
+using EventManagementApi.Core.Application.Features.Commands.Venue.Delete;
+using EventManagementApi.Core.Application.Features.Commands.Venue.Update;
+using EventManagementApi.Core.Application.Features.Queries.Venue.GetAll;
+using EventManagementApi.Core.Application.Features.Queries.Venue.GetById;
 using MediatR;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
@@ -12,30 +12,30 @@ namespace EventManagementApi.API.Controllers;
 [ApiController]
 [Route("api/[controller]")]
 [AllowAnonymous]
-public class PlaceController(IMediator mediator) : ControllerBase
+public class VenueController(IMediator mediator) : ControllerBase
 {
-    [HttpGet("places")]
+    [HttpGet("venues")]
     public async Task<IActionResult> GetPleaces()
     {
-        return Ok(await mediator.Send(new GetAllPlacesQuery()));
+        return Ok(await mediator.Send(new GetAllVenuesQuery()));
     }
-    [HttpGet("place")]
+    [HttpGet("venue")]
     public async Task<IActionResult> GetPlace(int id)
     {
-        return Ok(await mediator.Send(new GetPlaceByIdQuery{ Id = id}));
+        return Ok(await mediator.Send(new GetVenueByIdQuery{ Id = id}));
     }
-    [HttpPost("create-place")]
-    public async Task<IActionResult> CreatePlace(CreatePlaceCommand command)
+    [HttpPost("create-venue")]
+    public async Task<IActionResult> CreatePlace(CreateVenueCommand command)
     {
         return Ok(await mediator.Send(command));
     }
-    [HttpPut("update-place")]
-    public async Task<IActionResult> UpdatePlace(UpdatePlaceCommand command)
+    [HttpPut("update-venue")]
+    public async Task<IActionResult> UpdatePlace(UpdateVenueCommand command)
     {
         return Ok(await mediator.Send(command));
     }
-    [HttpDelete("delete-place")]
-    public async Task<IActionResult> DeletePlace(DeletePlaceCommand command)
+    [HttpDelete("delete-venue")]
+    public async Task<IActionResult> DeletePlace(DeleteVenueCommand command)
     {
         return Ok(await mediator.Send(command));
     }
